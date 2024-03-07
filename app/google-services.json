@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1077985840200",
+    "project_id": "carevista-25dc2",
+    "storage_bucket": "carevista-25dc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077985840200:android:31cd187a4e45b085871c7d",
+        "android_client_info": {
+          "package_name": "com.example.carevista"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAA5cpyYJEiGCX7R34-gr-g6lPF4wiK5rA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
