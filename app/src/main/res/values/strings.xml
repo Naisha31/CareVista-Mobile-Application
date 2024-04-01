@@ -3,8 +3,8 @@
 
     <!--  App About Information -->
     <string name="app_version">Version 1.0.0</string>
-    <string name="copyright">Copyright &#169; 2015 Solodroid Developer \n All rights reserved</string>
-    <string name="email_address">developer.solodroid@gmail.com</string>
+    <string name="copyright">Copyright &#169; 2024 CareVista Developer \n All rights reserved</string>
+    <string name="email_address">developer.CareVista.com</string>
 
     <!-- Parse push notification -->
     <string name="parse_application_id">V0c7q2d6VCVuc0LXZmk3ZZbUjI4UMhIrgWmekZxP</string>

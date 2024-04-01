@@ -25,7 +25,6 @@ public class ActivityAbout extends Activity {
 		case android.R.id.home:
 			// app icon in action bar clicked; go home
 			this.finish();
-			overridePendingTransition(R.anim.open_main, R.anim.close_next);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
@@ -36,6 +35,5 @@ public class ActivityAbout extends Activity {
 	public void onBackPressed() {
 		// TODO Auto-generated method stub
 		super.onBackPressed();
-		overridePendingTransition(R.anim.open_main, R.anim.close_next);
 	}
 }

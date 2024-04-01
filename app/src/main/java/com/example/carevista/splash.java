@@ -16,12 +16,8 @@ public class splash extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //menyembunyikan title bar di layar acitivy
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
-        //membuat activity menjadi fullscreen
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//        WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         /** Sets a layout for this activity */
         setContentView(R.layout.activity_splash);
@@ -35,18 +31,12 @@ public class splash extends AppCompatActivity {
                 /** Creates an intent to start new activity */
                 Intent intent = new Intent(getBaseContext(), MainActivity.class);
 
-                //memulai activity baru ketika waktu timer habis
                 startActivity(intent);
 
-                //menutup layar activity
                 finish();
 
             }
 
-            /** This method will be invoked in every 1000 milli seconds until
-             * this timer is expired.Because we specified 1000 as tick time
-             * while creating this CountDownTimer
-             */
             @Override
             public void onTick(long millisUntilFinished) {
 
