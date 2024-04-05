@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignUp extends AppCompatActivity {
 
-    TextInputEditText editTextName, editTextEmail,  editTextPhone, editTextPassword;
+    TextInputEditText editTextName, editTextEmail,  editTextPhone, editTextPassword, confirmPassword;
     Button buttonSignup;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
@@ -47,6 +47,7 @@ public class SignUp extends AppCompatActivity {
         editTextName=findViewById(R.id.full_name);
         editTextPhone=findViewById(R.id.phone_number);
         editTextPassword=findViewById(R.id.password);
+        confirmPassword=findViewById(R.id.confirm_password);
         buttonSignup=findViewById(R.id.signUp);
         mAuth=FirebaseAuth.getInstance();
         progressBar=findViewById(R.id.progressBar);
@@ -64,11 +65,12 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
-                String email, password, phone, name;
+                String email, password, phone, name, cpass;
                 email=String.valueOf(editTextEmail.getText());
                 password=String.valueOf(editTextPassword.getText());
                 phone=String.valueOf(editTextPhone.getText());
                 name=String.valueOf(editTextName.getText());
+                cpass=String.valueOf(confirmPassword.getText());
 
                 if(TextUtils.isEmpty(email)){
                     Toast.makeText(SignUp.this,"Enter email",Toast.LENGTH_SHORT).show();
@@ -94,6 +96,11 @@ public class SignUp extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (!password.equals(cpass)) {
+                                    // Passwords don't match, display an error message
+                                    Toast.makeText(SignUp.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
                                     progressBar.setVisibility(View.GONE);

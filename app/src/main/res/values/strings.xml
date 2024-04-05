@@ -66,9 +66,9 @@
     <string name="more">More Apps</string>
     <string name="rate">Rate Apps</string>
     <string-array name="main_menu_list">
-        <item >List Menu</item>
-        <item >Your Order</item>
-        <item >Confirmation</item>
+        <item>List Menu</item>
+        <item>Your Order</item>
+        <item>Confirmation</item>
     </string-array>
 
     <string name="drawer_open">Slider Menu Opened</string>

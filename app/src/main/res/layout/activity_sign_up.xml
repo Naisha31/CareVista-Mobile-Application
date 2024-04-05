@@ -11,9 +11,9 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="621dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="10dp"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="20dp"
@@ -52,36 +52,20 @@
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
-                android:text="Full Name"
-                android:textColor="@color/dark_blue"
-                android:textSize="20dp" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:elevation="10dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="300dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_height="50dp"
                 android:id="@+id/full_name"
-                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:hint="Full Name"
+                android:layout_margin="10dp"
                 android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
-                android:text="Email"
-                android:textColor="@color/dark_blue"
-                android:textSize="20dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_height="wrap_content"
@@ -89,21 +73,15 @@
                 android:elevation="10dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="300dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:id="@+id/email"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
+                android:inputType="textEmailAddress"
+                android:layout_margin="10dp"
+                android:hint="Email"
+                android:layout_gravity="center"
                 android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
-                android:text="Phone Number"
-                android:textColor="@color/dark_blue"
-                android:textSize="20dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_height="wrap_content"
@@ -111,53 +89,41 @@
                 android:elevation="10dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="300dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:hint="Phone Number"
+                android:inputType="phone"
                 android:id="@+id/phone_number"
                 android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
-                android:text="Password"
-                android:textColor="@color/dark_blue"
-                android:textSize="20dp" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:elevation="10dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="300dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_height="50dp"
                 android:id="@+id/password"
-                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
                 android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="10dp"
-                android:text="Confirm Password"
-                android:textColor="@color/dark_blue"
-                android:textSize="20dp" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:elevation="10dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="300dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
                 android:id="@+id/confirm_password"
                 android:layout_marginBottom="20dp"
                 android:textColor="@color/black" />
@@ -185,7 +151,7 @@
     <TextView
         android:id="@+id/alreadyHaveAccount"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
         android:text="Already have an account?"
         android:textSize="20dp"
         android:layout_gravity="center"

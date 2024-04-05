@@ -38,9 +38,6 @@
     <color name="form_bg">#FFFFFF</color>
     <color name="form_border">#40A8D6</color>
 
-    <color name="white">#ffffff</color>
-
-
     <color name="apptheme_primary">#009688</color>
     <color name="apptheme_primary_dark">#00796b</color>
     <color name="apptheme_accent">@android:color/white</color>
