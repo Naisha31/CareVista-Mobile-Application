@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/bookIconImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_app_icon" />
+
+
+            <TextView
+                android:id="@+id/bookITextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookIconImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Patient Profile"
+                android:textColor="@color/dark_blue"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/usernamefromlogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bookIconImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="Hello User"
+                android:textColor="@color/dark_blue"
+                android:textSize="20dp"
+                android:layout_marginLeft="27dp"
+                 />
+
+
+            <Button
+                android:id="@+id/datePickerButton"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:text="Date of Birth"
+                android:textSize="17dp"
+                style="?android:spinnerStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/hint"
+                android:onClick="openDatePicker"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                    <TextView
+                        android:paddingLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                        android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:text="Gender"
+                        android:textSize="17dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint"
+                        />
+
+            <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:id="@+id/gender">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/female"
+                    android:textColor="@color/black"
+                    android:text="Female"
+                    android:textSize="17dp"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/male"
+                    android:textColor="@color/black"
+                    android:text="Male"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="17dp"
+                    />
+
+            </RadioGroup>
+
+            </LinearLayout>
+
+
+            <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:hint="Weight in kg"
+                    android:inputType="number"
+                    android:id="@+id/weight"
+                    android:textColor="@color/black" />
+
+
+            <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/height"
+                    android:hint="Height in cm"
+                    android:inputType="number"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black" />
+
+            <TextView
+                android:paddingLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Upload your medical records"
+                android:textSize="17dp"
+                android:textColor="@color/hint"
+                />
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/fileUpload"
+                android:backgroundTint="@color/green"
+                android:text="Select File" />
+
+            <TextView
+                android:id="@+id/file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text=""
+                android:layout_margin="10dp"
+                android:textColor="@color/dark_blue"
+                android:textSize="20dp"
+                android:layout_marginLeft="20dp"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:text="Add Details"
+        android:textSize="20dp"
+        android:id="@+id/details"
+        android:backgroundTint="@color/green"
+        />
+
+
+
+</LinearLayout>
